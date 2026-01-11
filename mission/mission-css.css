@@ -1,0 +1,46 @@
+body {
+    outline:1px solid black;
+    width: 85%;
+    margin: 0 auto;
+}
+
+#mission_statement_box {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Noto Serif", 'Times New Roman', Times, serif;
+    width: 80%;
+    margin: 20px auto;
+
+}
+
+
+
+.italics {
+    font-style: italic;
+}
+
+#title {
+    color:rgb(67, 134, 235);
+    text-align: center;
+}
+
+#mission_statement {
+    text-align: center;
+}
+
+hr {
+    width: 80%;
+}
+
+.bullets {
+    padding-left: 30px;
+}
+
+#logo {
+    max-width: 140px;
+    display: block;
+    margin: 0 auto;
+}
