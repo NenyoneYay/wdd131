@@ -19,7 +19,7 @@ const two = '2'; //This ones a string
 let result = one * two;
 console.log(result);
 
-result = one + two;
+result = one + Number(two);
 console.log(result); //cuz it appended 2 to the end of 1
 
 
