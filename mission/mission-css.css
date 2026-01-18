@@ -39,10 +39,15 @@ hr {
 
 .bullets {
     padding-left: 30px;
+    line-height: 30px;
 }
 
 #logo {
     max-width: 140px;
     display: block;
     margin: 0 auto;
+}
+
+#main_paragraph {
+    line-height: 30px;
 }
