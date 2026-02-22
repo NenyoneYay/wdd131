@@ -11,35 +11,70 @@
     <script src="creditcard.js" defer></script>
 </head>
 <body>
-    <div id="form-grid">
-        <div id="credit-card-back">
-            <div id="black-bar">
+    <section class="errors"></section>
+    <form id="creditcard-form" action="#" method="get">
+        <div id="form-grid">
+            <div id="credit-card-back">
+                <div id="black-bar">
 
+                </div>
+                <div id="cvv">
+                    <label for="cvv-number">CVC/CVV</label>
+                    <input 
+                    type="text" 
+                    id="cvvNumber" 
+                    name="cvvnumberfield" 
+                    placeholder="xxx" 
+                    aria-labelledby="cvv-number"
+                    required>
+                </div>
             </div>
-            <div id="cvv">
-                <label for="cvv-number">CVC/CVV</label>
-                <input type="text" id="cvvNumber" name="cvvnumberfield" placeholder="xxx" aria-labelledby="cvv-number">
+            <div id="credit-card-front">
+                <p id="total">TOTAL: $199.99</p>
+                <p id="icon">💳</p>
+                <div id="cardExpiration">
+                    <label for="expirationDate">EXPIRATION</label>
+                    <input 
+                    type='text' 
+                    id='month' 
+                    name="expMonth" 
+                    placeholder="MM" 
+                    aria-labelledby="expirationDate">
+
+                    <input 
+                    type='text' 
+                    id='year'
+                    name="expYear" 
+                    placeholder="YY" 
+                    aria-labelledby="expirationDate"
+                    required>
+                </div>
+
+                <div id="card-number">
+                    <label for="card-number-field">CARD NUMBER</label>
+                    <input 
+                    type="text" 
+                    id="card-number-field" 
+                    name="card-number-field" 
+                    pattern="[0-9]{16}"
+                    placeholder="1234 5678 9123 4567" 
+                    aria-labelledby="card-number"
+                    required>
+                    
+                </div>
+                <div id="card-holder">
+                    <label for="card-holder-field">CARD HOLDER</label>
+                    <input 
+                    type="text" 
+                    id="card-holder-field" 
+                    name="card-holder-field" 
+                    placeholder="John Doe" 
+                    aria-labelledby="card-holder"
+                    required>
+                </div>
             </div>
+        <button type="submit">Submit</button>
         </div>
-        <div id="credit-card-front">
-            <p id="total">TOTAL: $199.99</p>
-            <p id="icon">💳</p>
-            <div id="cardExpiration">
-                <label for="expirationDate">EXPIRATION</label>
-                <input type='text' id='month' name="expMonth" placeholder="MM" aria-labelledby="expirationDate">
-                <input type='text' id='year' name="expYear" placeholder="YY" aria-labelledby="expirationDate">
-            </div>
-            <div id="card-number">
-                <label for="card-number">CARD NUMBER</label>
-                <input type="text" id="cardnumber" name="cardnumberfield" placeholder="1234 5678 9123 4567" aria-labelledby="card-number">
-            </div>
-            <div id="card-holder">
-                <label for="card-holder">CARD HOLDER</label>
-                <input type="text" id="cardholder" name="cardholderfield" placeholder="John Doe" aria-labelledby="card-holder">
-            </div>
-        </div>
-    <button type="submit">Submit</button>
-    </div>
-    
+    </form>
 </body>
 </html>
