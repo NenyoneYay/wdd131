@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michael Loftus">
+    <meta name="description" content="Ponder: practice with forms">
+    <title>Credit card</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="creditcard.css" rel="stylesheet">
+    <script src="creditcard.js" defer></script>
+</head>
+<body>
+    <div id="form-grid">
+        <div id="credit-card-back">
+            <div id="black-bar">
+
+            </div>
+            <div id="cvv">
+                <label for="cvv-number">CVC/CVV</label>
+                <input type="text" id="cvvNumber" name="cvvnumberfield" placeholder="xxx" aria-labelledby="cvv-number">
+            </div>
+        </div>
+        <div id="credit-card-front">
+            <p id="total">TOTAL: $199.99</p>
+            <p id="icon">💳</p>
+            <div id="cardExpiration">
+                <label for="expirationDate">EXPIRATION</label>
+                <input type='text' id='month' name="expMonth" placeholder="MM" aria-labelledby="expirationDate">
+                <input type='text' id='year' name="expYear" placeholder="YY" aria-labelledby="expirationDate">
+            </div>
+            <div id="card-number">
+                <label for="card-number">CARD NUMBER</label>
+                <input type="text" id="cardnumber" name="cardnumberfield" placeholder="1234 5678 9123 4567" aria-labelledby="card-number">
+            </div>
+            <div id="card-holder">
+                <label for="card-holder">CARD HOLDER</label>
+                <input type="text" id="cardholder" name="cardholderfield" placeholder="John Doe" aria-labelledby="card-holder">
+            </div>
+        </div>
+    <button type="submit">Submit</button>
+    </div>
+    
+</body>
+</html>
