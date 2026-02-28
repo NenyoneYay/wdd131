@@ -1,3 +1,7 @@
+main {
+    border: 5px solid #ffc671;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -7,6 +11,10 @@ h1 {
     display: block;
     margin: 0 auto;
     justify-self: center;
+}
+
+h1, h2, h3, h4 {
+    font-family: serif;
 }
 
 nav {
@@ -59,6 +67,7 @@ article img {
 
 footer {
     text-align: center;
+    border: 5px solid #ffc671;
 }
 
 @media (min-width: 600px) {
