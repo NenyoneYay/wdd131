@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michael Loftus">
+    <meta name="description" content="A wild monster appeared!">
+    <title>RPG character card</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="character.css" rel="stylesheet">
+    <script src="character.js" defer></script>
+</head>
+<body>
+    <div class="character-card">
+        <img class="character-img" src="images/snortleblat.webp">
+        <div class="character-name-box">
+            <h2 class="character-name">Snortleblat</h2>
+        </div>
+        <div class="character-stats-box">
+            <p class="character-class">Class: Swamp Beast Diplomat</p>
+            <p id="level"></p>
+            <p id="health">Health: 100</p>
+        </div>
+        <div class="character-buttons">
+            <button id="attacked-button">Attacked</button>
+            <button id="level-up-button">Level Up</button>
+        </div>
+    </div>
+</body>
+</html>

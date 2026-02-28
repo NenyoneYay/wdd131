@@ -1,0 +1,41 @@
+.character-card {
+    display: grid;
+    width: 500px;
+    margin: 40px auto;
+    background-color: rgb(75, 75, 75);
+    box-shadow: 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.character-card .character-img {
+    width: 98%;
+    margin: 5px auto;
+    border-radius: 10px;
+    height: 500px;
+    object-fit:cover;
+}
+
+.character-name-box {
+    background-color: rgb(14, 43, 33);
+    color: white;
+}
+.character-name-box h2 {
+    padding-left: 20px;
+    font-size: 2em;
+}
+
+.character-stats-box {
+    padding-left: 20px;
+    color: white;
+}
+.character-buttons {
+    margin: 0 auto;
+    padding: 20px;
+}
+.character-buttons button {
+    padding: 20px;
+    font-size: 1em;
+    background-color: rgb(158, 158, 158);
+    color: white;
+    border-radius: 10px;
+}
