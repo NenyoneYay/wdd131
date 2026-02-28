@@ -14,6 +14,7 @@ const character = {
     level: 1,
     health: 100,
     imgSrc: "images/Jarethehadshot.webp",
+    imgAlt: "A stunning image of Jareth the Goblin King",
     takeDamage: function () {
         if (character.health > 1)
         {
@@ -59,6 +60,7 @@ attackedButton.addEventListener('click', character.takeDamage);
 document.querySelector('.character-name').textContent = character.title;
 document.querySelector('.character-class').textContent = "Class: " + character.class;
 document.querySelector('.character-img').setAttribute('src', character.imgSrc);
+document.querySelector('.character-img').setAttribute('alt', character.imgAlt);
 // console.log("testing");
 // function testing() {
 //     console.log ('testing');
