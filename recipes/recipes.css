@@ -10,7 +10,11 @@ header {
     padding-bottom: 20px;
     justify-content: center;
     font-size: 2em;
-    font-family: 'Amatic SC'
+    font-family: 'Amatic SC', 'courier New', sans-serif; 
+}
+
+#title-area h1 {
+    margin-bottom: 0;
 }
 
 #title-area img {
@@ -28,10 +32,12 @@ header {
 #search-bar input {
     width: 93%;
     border-radius: 10px;
+    border: none;
 }
 
 #search-bar img {
-    width: 20px;
+    width: 25px;
+    padding-top: 2px;
 }
 
 main {
@@ -48,7 +54,7 @@ main {
     display: flex;
     flex-direction: column;
     border: solid black 2px;
-    border-radius: 10px;;
+    border-radius: 10px;
 }
 .recipe-box img {
     padding-bottom: 3px;
@@ -60,6 +66,8 @@ main {
 
 .recipe-title {
     color: rgb(75, 174, 255);
+    font-family:'Amatic SC', 'courier New', sans-serif;
+    font-size: 3em;
 }
 
 .social {
@@ -112,6 +120,7 @@ footer img {
     .recipe-info {
         display: flex;
         flex-direction: column;
+        /* justify-content: space-evenly; */
     }
 
     .recipe-box button {
