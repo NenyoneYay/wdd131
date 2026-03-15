@@ -75,7 +75,7 @@ const hikes = [
 ];
                 
 
-let hikeContainer = document.querySelector('#hike-container');
+lethikeContainer = document.querySelector('#hike-container');
 let button = document.querySelector('button');
 
 button.addEventListener("click", search);

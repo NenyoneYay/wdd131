@@ -39,6 +39,11 @@ header {
     width: 25px;
     padding-top: 2px;
 }
+#search-bar button {
+    /* border: none; */
+    border-radius: 10px;
+    /* background-color: white; */
+}
 
 main {
     max-width: 90%;
