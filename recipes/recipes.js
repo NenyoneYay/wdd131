@@ -1,4 +1,4 @@
-console.log("Hello World!");
+console.log("Hello World! Recipes!");
 
 let recipeContainer = document.querySelector('#recipe-container');
 
