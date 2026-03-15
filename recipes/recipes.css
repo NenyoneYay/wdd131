@@ -40,14 +40,18 @@ header {
     padding-top: 2px;
 }
 #search-bar button {
-    /* border: none; */
+    border: none;
     border-radius: 10px;
-    /* background-color: white; */
+    background-color: white;
 }
 
 main {
     max-width: 90%;
     margin: 0 auto;
+}
+
+span {
+    font-size: 1.5em;
 }
 
 .hidden {
@@ -65,9 +69,9 @@ main {
     padding-bottom: 3px;
 }
 
-.recipe-box button {
+/* .recipe-box button {
     width: 80px;
-}
+} */
 
 .recipe-title {
     color: rgb(75, 174, 255);

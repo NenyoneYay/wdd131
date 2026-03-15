@@ -318,55 +318,71 @@ function clickedSearch() {
     })
 }
 
-function search() {
-    let hikeQuery = document.querySelector("#search").value;
-
-    let filterHikes = hikes.filter(function(hike){
-        return (
-            hike.name.toLowerCase().includes(hikeQuery.toLowerCase()) ||
-            hike.description.toLowerCase().includes(hikeQuery.toLowerCase()) ||
-            hike.tags.find(tag => tag.toLowerCase().includes(hikeQuery.toLowerCase()))
-        );
-    })
-    console.log(filterHikes);
-
-    let sortedHikes = filterHikes.sort(compareHikes);
-    function compareHikes(a,b) {
-    if (a.difficulty < b.difficulty) {
-        return -1;
-    } else if (a.difficulty > b.difficulty) {
-        return 1;
-    }
-    return 0;
-    }
-
-    hikeContainer.innerHTML = "";
-    sortedHikes.forEach(function(hike){
-        renderHike(hike);
-    })
-}
-
 function recipeTemplate(recipe) {
+    let htmlLabels = ``;
+    let htmlStars = ``;
+    addLabels(recipe);
+    addStars(recipe);
     return `
     <div class="recipe-box"> 
         <img src="${recipe.image}" alt="A picture of the completed recipe">
         <div class="recipe-info">
-            <button>FIXME</button>
+            <div class="labels-box">
+                ${htmlLabels}
+            </div>
             <h2 class="recipe-title">${recipe.name}</h2>
             <span
                 class="rating"
                 role="img"
                 aria-label="${recipe.rating} out of 5 stars"
                 >
-                    <span aria-hidden="true" class="icon-star">⭐</span> 
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star">⭐</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    ${htmlStars}
                 </span>
                 <p class="hidden">${recipe.description}
     `
+    // <span aria-hidden="true" class="icon-star">⭐</span> 
+    // <span aria-hidden="true" class="icon-star">⭐</span>
+    // <span aria-hidden="true" class="icon-star">⭐</span>
+    // <span aria-hidden="true" class="icon-star">½</span>
+    // <span aria-hidden="true" class="icon-star-empty">☆</span>
+    
+    function addLabels(recipe) {
+        for (let i=0; i < recipe.tags.length; i++) {
+            htmlLabels += `<button>${recipe.tags[i]}</button>`
+        }
+    }
+
+    function addStars(recipe) {
+        for(let i = 1; i <= 5; i++) {
+            if (i <= recipe.rating) {
+                //Add a star
+                htmlStars += `<span aria-hidden="true" class="icon-star">★</span>`
+            }
+            else if (i > recipe.rating && i < (recipe.rating + 1)){
+                //Add a half star
+                htmlStars += `<span aria-hidden="true" class="icon-star">⯪</span>`
+            }
+            else {
+                htmlStars += `<span aria-hidden="true" class="icon-star-empty">☆</span>`
+            }
+        }
+    }
 }
+
+
+/*
+    TESTING FOR HALF STARS
+    Lets say a thing has a rating of 3.5
+    i=1 (less than 3.5)
+    add a star
+    i=2 (less)
+    add a star
+    i=3 (less)
+    add a star
+    i=4 (less)
+    end
+*/
+
 
 /* HTML for recipe-box for reference
         <div class="recipe-box">
@@ -393,6 +409,7 @@ function recipeTemplate(recipe) {
 function renderRecipe(recipe) {
     let html = recipeTemplate(recipe);
     recipeContainer.innerHTML += html;
+    // addStars(recipe);
 }
 
 function init() {
