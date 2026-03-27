@@ -1,6 +1,3 @@
-
-
-
 const hikes = [
   {
     name: "Bechler Falls",
@@ -74,8 +71,8 @@ const hikes = [
   }
 ];
                 
-
-lethikeContainer = document.querySelector('#hike-container');
+console.log("Testing");
+let hikeContainer = document.querySelector('#hike-container');
 let button = document.querySelector('button');
 
 button.addEventListener("click", search);
