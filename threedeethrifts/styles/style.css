@@ -4,9 +4,9 @@
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #06D6A0;
+  --primary-color: #085f6d;
   --secondary-color: #F8FFE5;
-  --accent1-color: #1B9AAA;
+  --accent1-color: #5ee9c4;
   --accent2-color: #FFC43D;
 
   /* change the values below to your chosen font(s) */
@@ -116,7 +116,7 @@ main h2 {
 }
 
 .main-bar button {
-    background-color: #1B9AAA;
+    background-color: #5ee9c4;
     border: none;
     cursor:pointer;
 }
@@ -125,6 +125,7 @@ main h2 {
     background-color: #F8FFE5;
     max-width: 90%;
     margin: 0 auto;
+    /* display: block; */
 }
 
 #cart-header {
@@ -152,6 +153,7 @@ hr {
     padding: 10px;
 }
 
+
 .main-bar img {
     width: 50px;
     height: 50px;
@@ -159,7 +161,7 @@ hr {
 }
 
 .product-box {
-    background-color: #FFC43D;
+    background-color: #cfcfcf;
     max-width: 90%;
     margin: 0 auto;
     margin-top: 10px;
