@@ -7,7 +7,7 @@ const products = [
     {
         id: 1,
         title: 'Barbarian',
-        description: '', 
+        description: 'Testing', 
         price: '$12.99',
         salePrice: '$10.99',
         imgSrc: 'images/barbarian.jpg', 
@@ -66,7 +66,8 @@ const products = [
 cartButton.addEventListener('click', openCartWindow);
 productContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('buy-button')) {
-        console.log("Button clicked!");
+        const index = e.target.dataset.index;
+        addToCart(products[index]);
     }
 });
 
@@ -75,13 +76,14 @@ function openCartWindow(){
     if (confirm ("Would you like to check out now?") == true) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         let cartLength = cart.length;
-        console.log(cartLength);
+        // console.log(cartLength); TESTING
+        // console.log("Testing: " + cart[0].title); TESTING
         for (let i = 0; i < cartLength; i++) 
         {
             console.log("TESTING: " + cart[i].title);
         }
         localStorage.setItem("cart", JSON.stringify(cart));
-        // window.location.href = "checkout.html";
+        window.location.href = "checkout.html";
     };
 }
 
@@ -97,7 +99,7 @@ function testFunction() {
     console.log("Testing!");
 }
 
-function productTemplate(product) {
+function productTemplate(product, index) {
     let displayPrice;
     if (product.onSale){
         displayPrice = `<s>${product.price}</s> ${product.salePrice}`;
@@ -110,21 +112,19 @@ function productTemplate(product) {
             <h3>${product.title}</h3>
             <p class="description">${product.description}</p>
             <p class="price">Price: ${displayPrice}</p>
-            <button class="buy-button">Buy now</button>
+            <button class="buy-button" data-index="${index}">Buy now</button>
         </div>
     `
 }
-function renderProduct(product) {
-    let html = productTemplate(product);
+function renderProduct(product, index) {
+    let html = productTemplate(product, index);
     productContainer.innerHTML += html;
 
 }
 
 function init() {
-    renderProduct(products[1]);
-    renderProduct(products[2]);
+    products.forEach((product, index) => renderProduct(product, index));
 }
-
 init();
 
 // addToCart(products[0])
