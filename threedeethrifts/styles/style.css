@@ -121,6 +121,37 @@ main h2 {
     cursor:pointer;
 }
 
+#cart-box {
+    background-color: #F8FFE5;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+#cart-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.item-summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+hr {
+    max-width: 95%;
+}
+
+#subtotal-text {
+    text-align: right;
+    padding: 10px;
+}
+
 .main-bar img {
     width: 50px;
     height: 50px;
@@ -169,6 +200,10 @@ main h2 {
     height: 90%;
     /* max-width: 150px; */
     justify-self: center;
+}
+
+.hidden {
+    display: none;
 }
 /* ------------------------------------------FOOTER------------------------------------------ */
 
