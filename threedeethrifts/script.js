@@ -105,10 +105,23 @@ function openCartWindow(){ //Update cart, and toggle visibility of the cart wind
 
 function updateCart() { //Refresh what items are in the cart and display them in the cart window with subtotal
     let subtotal = 0;
+    
+    let subtotalHTML = document.getElementById('subtotal-text');
     cartContents.innerHTML = ``; //Step 1: Clear out cart area
+    subtotalHTML.innerHTML = ``;
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cartLength = cart.length;
     cart.forEach(displayItem); //For every item in the cart, render it on a new line
+    for (i=0; i<cartLength; i++) {
+        if (cart[i].onSale){
+            subtotal += cart[i].salePrice;
+        } else {
+        subtotal += cart[i].price;
+        }
+    }
     localStorage.setItem("cart", JSON.stringify(cart));
+    subtotalHTML.innerHTML = `Subtotal: $${subtotal}`;
+    
 }
 
 function displayItem(item) {

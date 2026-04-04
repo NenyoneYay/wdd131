@@ -5,8 +5,8 @@
 :root {
   /* change the values below to your colors from your palette */
   --primary-color: #085f6d;
-  --secondary-color: #F8FFE5;
-  --accent1-color: #5ee9c4;
+  --secondary-color: #ffffff;
+  --accent1-color: #96c5d2;
   --accent2-color: #FFC43D;
 
   /* change the values below to your chosen font(s) */
@@ -80,7 +80,7 @@ header p {
 }
 
 #links a {
-    background-color: #9ff5de;
+    background-color: #71bfd4;
     padding: 5px;
     width: 70px;
     color: black;
@@ -116,13 +116,13 @@ main h2 {
 }
 
 .main-bar button {
-    background-color: #5ee9c4;
+    background-color: #96c5d2;
     border: none;
     cursor:pointer;
 }
 
 #cart-box {
-    background-color: #F8FFE5;
+    background-color: #eff1ea;
     max-width: 90%;
     margin: 0 auto;
     /* display: block; */
