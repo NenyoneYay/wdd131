@@ -1,0 +1,5 @@
+keep as a store page, not a search page
+Look into local storage
+Sticky positioning -css (to keep a window moving with the user)
+favicon
+meta tags
