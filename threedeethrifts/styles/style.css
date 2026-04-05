@@ -209,6 +209,14 @@ hr {
 .hidden {
     display: none;
 }
+
+#about-us {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 5px;
+        background-color: #eff1ea;
+    }
+
 /* ------------------------------------------FOOTER------------------------------------------ */
 
 footer {
@@ -256,5 +264,10 @@ footer {
     }
     footer {
         font-size: 1em;
+    }
+    #about-us {
+        max-width: 50%;
+        margin: 0 auto;
+        padding-bottom: 10px;
     }
 }

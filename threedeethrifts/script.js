@@ -53,6 +53,17 @@ const products = [
         imgAlt: 'A 3d printed model of a dwarf',
         tags: ['resin', 'TTRPG', 'miniature'],
         onSale: 0
+    },
+    {
+        id: 5,
+        title: 'Chess set',
+        description: 'A full printed chess set, 1 copy of each piece pictured', 
+        price: 39.99,
+        salePrice: 35.99,
+        imgSrc: 'images/chess.png', 
+        imgAlt: 'A resin chess set',
+        tags: ['resin', 'chess', 'miniature'], 
+        onSale: 0
     }
 ]
 
