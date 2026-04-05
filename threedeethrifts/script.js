@@ -13,8 +13,8 @@ const products = [
     {
         id: 1,
         title: 'Barbarian',
-        description: 'Testing', 
-        price: 12.99,
+        description: 'This strong warrior is ready to bash skulls at your DnD table!', 
+        price: 14.99,
         salePrice: 10.99,
         imgSrc: 'images/barbarian.jpg', 
         imgAlt: 'A resin barbarian',
@@ -23,10 +23,10 @@ const products = [
     }, 
     {
         id: 2,
-        title: 'Gecko monster',
-        description: '', 
+        title: 'Iguaneon',
+        description: 'Perfect for a boss fight or as a fun painting project, the Iguaneon brings its grace to the tabletop!', 
         price: 12.99,
-        salePrice: 10.99,
+        salePrice: 8.99,
         imgSrc: 'images/gecko.jpg', 
         imgAlt: 'A filament gecko monster with six legs',
         tags: ['filament', 'TTRPG', 'miniature'],
@@ -35,29 +35,18 @@ const products = [
     {
         id: 3,
         title: 'Spike Demon',
-        description: '', 
-        price: 12.99,
-        salePrice: 10.99, 
+        description: 'Straight out of the Nine Circles of Tartarus, this incredibly detailed monster will awe your group', 
+        price: 19.99,
+        salePrice: 13.99, 
         imgSrc: 'images/monster.jpg', 
         imgAlt: 'A menacing spike demon made of resin',
         tags: ['resin', 'TTRPG', 'miniature'],
-        onSale: 0
+        onSale: 1
     }, 
     {
         id: 4,
-        title: 'Nidoran',
-        description: '', 
-        price: 12.99,
-        salePrice: 10.99,
-        imgSrc: 'images/nidoran.jpg', 
-        imgAlt: 'A cute Pokemon made of resin',
-        tags: ['resin', 'pokemon', 'toy'], 
-        onSale: 0
-    }, 
-    {
-        id: 5,
         title: 'Dwarf',
-        description: '',
+        description: 'A hardy old adventurer who has put away his axe in exchange for a walking stick and a cob pipe',
         price: 12.99,
         salePrice: 10.99,
         imgSrc: 'images/dwarf.jpg', 
@@ -94,7 +83,6 @@ productContainer.addEventListener('click', (e) => {
 function openCartWindow(){ //Update cart, and toggle visibility of the cart window
     // updateCart();
     if (cartHidden == true) {
-        console.log("Testing");
         cartWindow.classList.remove("hidden");
         cartHidden = false;
     } else {
@@ -148,9 +136,6 @@ function addToCart(item) { //Add an item to cart when button is pressed
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push(item);
     localStorage.setItem("cart", JSON.stringify(cart));
-    console.log("TESTING: Added to cart");
-    // console.log(item);
-    //TODO: updateCart();
 }
 
 function productTemplate(product, index) {//Template used when rendering product
@@ -179,6 +164,3 @@ function init() {
     products.forEach((product, index) => renderProduct(product, index));
 }
 init();
-
-// addToCart(products[0])
-// confirm("Testing");

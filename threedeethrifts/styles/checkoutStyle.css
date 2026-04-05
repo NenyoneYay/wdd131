@@ -1,5 +1,5 @@
-#cart-box {
-    
+main {
+    font-family: "Open Sans", Helvetica, sans-serif;
 }
 
 #input-fields {
@@ -8,4 +8,17 @@
 }
 input, select {
     width: 90%;
+}
+
+@media (min-width: 740px){
+
+    #checkoutForm {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 500px;
+    }
+    input, select {
+    width: 45%;
+    }
 }

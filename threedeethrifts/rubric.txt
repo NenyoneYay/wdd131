@@ -1,0 +1,11 @@
+Audience
+The site contains significant textual content, appropriate for your audience, so that they can understand the meaning and message
+
+ Wireframe Layout and Styling
+The site is laid out and styled according to your site plan wireframes
+
+ Valid HTML and CSS
+The site is built with valid HTML and CSS.
+ 
+ Accessibility
+The site scores at least 90 on Lighthouse on Performance and 96 on Accessibility. Lenience will be shown if the only error is Cumulative Layout Shift

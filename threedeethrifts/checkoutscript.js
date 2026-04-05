@@ -54,7 +54,7 @@ function updateCart() { //Refresh what items are in the cart and display them in
     totalCalculation.innerHTML = `
         <p id="subtotal-text">Subtotal: $${subtotal}</p>
         <p id="sales-tax">Sales tax: $${Math.round(taxNum*100)/100}</p>
-        <p>Total: $${subtotal + Math.round(taxNum*100)/100}}</p>
+        <p>Total: $${subtotal + Math.round(taxNum*100)/100}</p>
     `;
     
 }
