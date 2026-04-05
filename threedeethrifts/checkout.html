@@ -8,7 +8,9 @@
     <title>Document</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="styles/style.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <link href="styles/checkoutStyle.css" rel="stylesheet">
+    <script src="checkoutscript.js" defer></script>
+    <link rel="icon" href="images/icon.ico">
 </head>
 <body>
     <header>
@@ -26,36 +28,139 @@
     </header>
 
     <main>
-        <div class="main-bar">
-            <h2>Featured Products</h2>
-            <button id="cart-button"><img id="cart-button" src="images/cart-icon.png" alt="Shopping cart picture"></button>
-        </div>
-        <div id="cart-box" class="hidden">
+        
+        <div id="cart-box">
+            <p>Your order: </p>
             <div id="cart-header">
                 <p>Name</p>
                 <p>Quantity</p>
                 <p>Price</p>
             </div>
             <hr>
-            <div class="item-summary">
-                <p>A gun</p>
-                <p>Like 5</p>
-                <p>$500.00</p>
+            <div id="cart-contents">
+                <div class="item-summary">
+                    <p>A gun</p>
+                    <p>Like 5</p>
+                    <p>$500.00</p>
+                </div>
             </div>
             <hr>
-            <p id="subtotal-text">Subtotal: $500.00</p>
-            <button id="checkout-button">Checkout</button>
-            <button id="clear-cart">Clear cart</button>
+            <div id="total-calculation">
+                <p id="subtotal-text">Subtotal: $0.00</p>
+                <p id="sales-tax">Sales tax: $0.00</p>
+                <p>Total: $0.00</p>
+            </div>
+            <button id="clear-cart">Clear Cart</button>
+            <hr>
+
+            <div id='input-fields'>
+                <form id="checkoutForm" action="#" method="get">
+                    <label for="fname">First name*: </label><br>
+                    <input type="text" id="fname" name="fname" required><br>
+
+                    <label for="lname">Last name*: </label><br>
+                    <input type="text" id="lname" name="lname" required><br>
+                    <br>
+
+                    <label for="street1">Street address 1*: </label><br>
+                    <input type="text" id="street1" name="street1" required><br>
+
+                    <label for="street2">Street address 2: </label><br>
+                    <input type="text" id="street2" name="street2"><br>
+                    <br>
+
+                    <label for="city">City*: </label><br>
+                    <input type="text" id="city" name="city" required><br>
+
+                    <label for="state">State*: </label><br>
+                    <select id="state" name="state" required>
+                    <option value="">--Select a state--</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option> <!--No sales tax-->
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option> <!--No sales tax-->
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option> <!--No sales tax-->
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option> <!--No sales tax-->
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option> <!--No sales tax-->
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                    <!-- Add all 50 states -->
+                    </select><br>
+
+                    <label for="zip">ZIP*: </label><br>
+                    <input type="text" id="state" name="state" required><br>
+
+                    <p id="creditCardNumberContainer" class="hide" role="region" aria-labelledby="creditCardLabel">
+            <label id="creditCardLabel" for="creditCardNumber">Credit Card Number*:</label>
+            <input
+            type="text"
+            id="creditCardNumber"
+            name="creditCardNumber"
+            pattern="[0-9]{16}"
+            placeholder="Enter 16 digits"
+            required
+            />
+            <label for="expirationDate">Expiration*</label>
+            <input 
+            type="text" 
+            id="month" 
+            name="expMonth" 
+            placeholder="MM" 
+            aria-labelledby="expirationDate">
+            <input 
+            type="text" 
+            id="year" 
+            name="expYear" 
+            placeholder="YY" 
+            aria-labelledby="expirationDate">
+            </p>
+
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
         </div>
-        <div id="product-container">
-            <!-- <div class="product-box">
-                <img class="product-img" src="images/monster.jpg" alt="#">
-                <h3>Product Name</h3>
-                <p class="description">This is where the product description would gohis is where the product description would gohis is where the product description would gohis is where the product description would go.</p>
-                <p class="price">Price: $##.##</p>
-                <button class="buy-button">Buy now</button>
-            </div> -->
-        </div>
+
     </main>
 
 

@@ -148,9 +148,11 @@ hr {
     max-width: 95%;
 }
 
-#subtotal-text {
+
+#total-calculation {
     text-align: right;
-    padding: 10px;
+    margin-right: 10px;
+    font-family: "Open Sans", Helvetica, sans-serif;
 }
 
 
@@ -215,7 +217,7 @@ footer {
 
 /* ----------------------------------------MEDIA TAG-------------------------------------------- */
 
-@media (min-width: 600px) {
+@media (min-width: 740px) {
     header img {
         padding: 10px;
     }
@@ -228,5 +230,14 @@ footer {
     }
     header h1 {
         font-size: 3em;
+    }
+
+    #product-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .product-box {
+        padding: 0px;
+        width: 95%;
     }
 }

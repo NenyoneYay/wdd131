@@ -17,7 +17,7 @@ const products = [
         price: 12.99,
         salePrice: 10.99,
         imgSrc: 'images/barbarian.jpg', 
-        imgAlt: '',
+        imgAlt: 'A resin barbarian',
         tags: ['resin', 'TTRPG', 'miniature'], 
         onSale: 1
     }, 
@@ -28,7 +28,7 @@ const products = [
         price: 12.99,
         salePrice: 10.99,
         imgSrc: 'images/gecko.jpg', 
-        imgAlt: '',
+        imgAlt: 'A filament gecko monster with six legs',
         tags: ['filament', 'TTRPG', 'miniature'],
         onSale: 0
     }, 
@@ -39,7 +39,7 @@ const products = [
         price: 12.99,
         salePrice: 10.99, 
         imgSrc: 'images/monster.jpg', 
-        imgAlt: '',
+        imgAlt: 'A menacing spike demon made of resin',
         tags: ['resin', 'TTRPG', 'miniature'],
         onSale: 0
     }, 
@@ -50,7 +50,7 @@ const products = [
         price: 12.99,
         salePrice: 10.99,
         imgSrc: 'images/nidoran.jpg', 
-        imgAlt: '',
+        imgAlt: 'A cute Pokemon made of resin',
         tags: ['resin', 'pokemon', 'toy'], 
         onSale: 0
     }, 
@@ -166,7 +166,7 @@ function productTemplate(product, index) {//Template used when rendering product
             <h3>${product.title}</h3>
             <p class="description">${product.description}</p>
             <p class="price">Price: $${displayPrice}</p>
-            <button class="buy-button" data-index="${index}">Buy now</button>
+            <button class="buy-button" data-index="${index}">Add to Cart</button>
         </div>
     `
 }
